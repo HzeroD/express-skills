@@ -21,7 +21,12 @@ function show(req, res) {
   })
 }
 
+function newTodo(req, res) {
+  res.render('todos/new')
+}
+
 export {
   index,
-  show
+  show,
+  newTodo as new
 }
