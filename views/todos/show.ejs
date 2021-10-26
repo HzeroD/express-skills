@@ -8,18 +8,14 @@
   <title>Express To-Dos</title>
 </head>
 <body>
-  <h1>Todos</h1>
+	<h1>Todos</h1>
   <% if(error) { %>
     <h2><%= error %></h2>
+  <% } else { %>
+    <h2>Todo #<%= todo._id %></h2>
+    <h3><%= todo.text %></h3>
+    <p>Complete: <%= todo.done ? 'Yes' : 'No' %></p>
   <% } %>
-  <ul>
-    <% todos.forEach(function(todo) { %>
-      <li>
-        <a href="/todos/<%= todo._id %>"><%= todo.text %></a>
-          - 
-        <%= todo.done ? 'done' : 'not done' %>
-      </li>
-    <% }) %>
-  </ul>
+	<a href="/todos">Go back</a>
 </body>
 </html>

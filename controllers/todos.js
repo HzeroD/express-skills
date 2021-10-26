@@ -11,7 +11,16 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  todoDb.findById(req.params.id, function(error, todo) {
+    res.render('todos/show', {
+      todo,
+      error
+    })
+  })
+}
 
 export {
-  index
+  index,
+  show
 }
