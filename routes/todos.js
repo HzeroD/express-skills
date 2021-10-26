@@ -7,6 +7,7 @@ const router = Router()
 router.get('/', todosCtrl.index)
 router.get('/new', todosCtrl.new)
 router.get('/:id', todosCtrl.show)
+router.post('/', todosCtrl.create)
 
 export {
   router

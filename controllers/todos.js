@@ -1,4 +1,3 @@
-
 import * as todoDb from '../data/todo-db.js'
 
 
@@ -25,8 +24,15 @@ function newTodo(req, res) {
   res.render('todos/new')
 }
 
+function create(req, res) {
+  todoDb.create(req.body, function(error, todo) {
+    res.redirect('/todos')
+  })
+}
+
 export {
   index,
   show,
-  newTodo as new
+  newTodo as new,
+  create,
 }
