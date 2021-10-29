@@ -4,6 +4,7 @@ const skills = [
   {language: 'Javascript', hard: false, _id: 139608},
 ]
 
+
 const find = (conditions, callback) => {
   // see if this works, if not, execute the code in the catch block
   try {

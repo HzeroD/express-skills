@@ -25,9 +25,13 @@ function newskill(req, res) {
 }
 
 function create(req, res) {
+  req.body.hard = !!req.body.hard
   skillDb.create(req.body, function(error, skill) {
     res.redirect('/skills')
   })
+
+  
+  
 }
 
 function deleteskill(req, res) {
